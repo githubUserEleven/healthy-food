@@ -1,0 +1,49 @@
+.btn {
+  @include animate(background);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  color: white;
+  border: none;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 15px;
+  height: 35px;
+  font-weight: 700; 
+
+  @include media(">=tablet") {
+    font-size: 18px;
+    min-width: 220px;
+    min-height: 72px;
+    padding: 15px 60px;
+  }
+
+  &.btn-sm {
+    font-weight: 900;
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 15px;  
+    padding: 15px 15px;
+  }
+
+  &.btn-outline {
+    border: 2px solid #303030;
+    color: $light-gray;
+    border-radius: 30px;
+  }
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $black;
+    border: none;
+    border-radius: 43px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
