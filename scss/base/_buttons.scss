@@ -1,5 +1,5 @@
 .btn {
-  @include animate(background);
+  @include animate(background-color);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -26,14 +26,20 @@
     font-weight: 900;
     min-width: 100px;
     min-height: 40px;
-    font-size: 15px;  
+    font-size: 12px;  
     padding: 15px 15px;
   }
 
   &.btn-outline {
     border: 2px solid #303030;
+    text-transform: uppercase;
     color: $light-gray;
     border-radius: 30px;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $dark-gray;
+    }
   }
 
   &.btn-primary {
