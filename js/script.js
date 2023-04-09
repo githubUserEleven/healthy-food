@@ -14,8 +14,6 @@ function initSlickSlider() {
             {
                 breakpoint: 778,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
                     dots: true,
                     arrows: false
                 }

@@ -326,13 +326,13 @@ h2 {
 
 h3 {
   font-size: 22px;
-  line-height: 0.53;
+  line-height: 1.53;
   font-weight: 400;
 }
 @media (min-width: 768px) {
   h3 {
     font-size: 32px;
-    line-height: 0.93;
+    line-height: 1;
   }
 }
 
@@ -396,11 +396,18 @@ img {
 .holder-title strong {
   position: absolute;
   top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 100px;
+  left: 0;
+  right: 0;
+  font-size: 90px;
   z-index: -1;
   color: #303030;
+}
+@media (min-width: 768px) {
+  .holder-title strong {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+  }
 }
 .holder-title h2 {
   color: #d9d9d9;
@@ -698,10 +705,17 @@ img {
   margin-bottom: 40px;
 }
 .intro .container h1 {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
-.intro .container .info-box {
-  width: 980px;
+@media (min-width: 768px) {
+  .intro .container h1 {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .intro .container .info-box {
+    width: 980px;
+  }
 }
 
 .info-list {
@@ -769,11 +783,11 @@ img {
   border-radius: 6px;
   background-color: #252525;
   text-align: center;
-  padding: 30px 65px;
+  padding: 30px 20px;
 }
 @media (min-width: 768px) {
   .about .about-block {
-    padding: 94px 65px;
+    padding: 94px 65px 59px;
   }
 }
 .about .about-block .description-box {
@@ -900,6 +914,9 @@ img {
   border: 3px solid #1A1A1A;
 }
 
+.work {
+  padding: 0 0 30px;
+}
 .work h2 {
   text-align: center;
 }
@@ -964,6 +981,14 @@ img {
   color: #929292;
 }
 
+.dishes {
+  padding: 35px 0 20px;
+}
+@media (min-width: 768px) {
+  .dishes {
+    padding: 75px 0 46px;
+  }
+}
 .dishes .row {
   display: flex;
   flex-wrap: wrap;
@@ -1015,12 +1040,12 @@ img {
   border-radius: 6px;
 }
 .dishes .card-holder {
-  padding: 20px;
+  padding: 12px;
   font-size: 13px;
 }
 @media (min-width: 768px) {
   .dishes .card-holder {
-    padding: 27px 30px 30px;
+    padding: 27px 30px 24px;
   }
 }
 .dishes .card-holder .card-body {
@@ -1041,6 +1066,17 @@ img {
   justify-content: space-between;
 }
 
+.chefs {
+  padding: 20px 0 30px;
+}
+@media (min-width: 768px) {
+  .chefs {
+    padding: 50px 0 60px;
+  }
+}
+.chefs h2 {
+  margin-bottom: 61px;
+}
 .chefs .holder-box {
   display: flex;
   justify-content: center;
@@ -1099,6 +1135,14 @@ img {
   }
 }
 
+.recipes {
+  padding: 30px 0 30px;
+}
+@media (min-width: 768px) {
+  .recipes {
+    padding: 70px 0 67px;
+  }
+}
 .recipes .main-box,
 .recipes li {
   background-position: center;
@@ -1176,7 +1220,7 @@ img {
 @media (min-width: 768px) {
   .recipes .main-box .preview-recipes {
     height: 100%;
-    padding: 60px 0;
+    padding: 60px 0 50px;
   }
 }
 .recipes .main-box .preview-recipes .badge {
@@ -1216,8 +1260,8 @@ img {
   min-height: 150px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
-  padding: 30px;
-  margin: 15px 0 25px 0;
+  padding: 30px 30px 14px;
+  margin: 0 0 30px 0;
 }
 .recipes .blog-list-link > li:last-child {
   margin-bottom: 0;
@@ -1255,6 +1299,16 @@ img {
   color: #252525;
 }
 
+.social {
+  padding: 30px 0 30px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .social {
+    padding: 60px 0 60px;
+    margin-bottom: 60px;
+  }
+}
 .social .row {
   display: flex;
   flex-wrap: wrap;
@@ -1285,6 +1339,11 @@ img {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   width: 350px;
+}
+@media (max-width: 767px) {
+  .social .card {
+    width: 350px;
+  }
 }
 .social .card .icons {
   font-size: 27px;

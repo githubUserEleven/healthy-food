@@ -81,12 +81,12 @@ h2 {
 
 h3 {
   font-size: 22px;
-  line-height: 0.53;
+  line-height: 1.53;
   font-weight: 400;
 
   @include media(">=tablet") {
     font-size: 32px;
-    line-height: 0.93;
+    line-height: 1;
   }
 }
 
@@ -152,11 +152,17 @@ ul {
   strong {
     position: absolute;
     top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 100px;
+    left: 0;
+    right: 0;
+    font-size: 90px;
     z-index: -1;
     color: #303030;
+
+    @include media('>=tablet') {
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 100px;
+    }
   }
 
   h2 {
@@ -481,11 +487,18 @@ ul {
     }
 
     h1 {
+      margin-bottom: 20px;
+      
+      @include media('>=tablet') { 
       margin-bottom: 0;
+      }
     }
 
     .info-box {
-      width: 980px;
+
+      @include media('>=desktop') {
+        width: 980px;
+      }
     }
   }
 }
@@ -561,10 +574,10 @@ ul {
     border-radius: 6px;
     background-color: $dark-gray;
     text-align: center;
-    padding: 30px 65px;
+    padding: 30px 20px;
 
     @include media(">=tablet") {
-      padding: 94px 65px;
+      padding: 94px 65px 59px;
     }
 
     .description-box {
@@ -699,6 +712,8 @@ ul {
 }
 
 .work {
+  padding: 0 0 30px;
+
   h2 {
     text-align: center;
   }
@@ -775,6 +790,12 @@ ul {
 }
 
 .dishes {
+  padding: 35px 0 20px;
+
+  @include media('>=tablet') {
+    padding: 75px 0 46px;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -830,11 +851,11 @@ ul {
   }
 
   .card-holder {
-    padding: 20px;
+    padding: 12px;
     font-size: 13px;
 
     @include media(">=tablet") {
-      padding: 27px 30px 30px;
+      padding: 27px 30px 24px;
     }
 
     .card-body {
@@ -861,6 +882,16 @@ ul {
 }
 
 .chefs {
+  padding: 20px 0 30px;
+
+  @include media('>=tablet') {
+  padding: 50px 0 60px;
+  }
+
+  h2 {
+    margin-bottom: 61px;
+  }
+
   .holder-box {
     display: flex;
     justify-content: center;
@@ -925,6 +956,12 @@ ul {
 }
 
 .recipes {
+  padding: 30px 0 30px;
+
+  @include media('>=tablet') {
+    padding: 70px 0 67px;
+  }
+
   .main-box,
   li {
     background-position: center;
@@ -1008,7 +1045,7 @@ ul {
 
       @include media(">=tablet") {
         height: 100%;
-        padding: 60px 0;
+        padding: 60px 0 50px;
       }
 
       .badge {
@@ -1054,8 +1091,8 @@ ul {
       min-height: 150px;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
       border-radius: 6px;
-      padding: 30px;
-      margin: 15px 0 25px 0;
+      padding: 30px 30px 14px;
+      margin: 0 0 30px 0;
 
       &:last-child {
         margin-bottom: 0;
@@ -1103,6 +1140,15 @@ ul {
 }
 
 .social {
+  padding: 30px 0 30px;
+  margin-bottom: 30px;
+
+  @include media('>=tablet') {
+    padding: 60px 0 60px;
+    margin-bottom: 60px;
+  
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -1136,6 +1182,10 @@ ul {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     width: 350px;
+
+    @include media('<tablet') {
+      width: 350px;
+    }
 
     .icons {
       font-size: 27px;
